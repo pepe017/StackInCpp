@@ -16,7 +16,7 @@ public:
     void push(int item)
     {
         if (TOP >= Size - 1)
-            cout << "OverFlowed\n\n";
+            cout << "\033[1;31mOverFlowed\033[1;0m\n\n";
         else
             arr[++TOP] = item;
     }
@@ -24,7 +24,7 @@ public:
     {
         if (TOP == -1)
         {
-            cout << "UnderFlowed\n\n";
+            cout << "\033[1;31mUnderFlowed\033[1;0m\n\n";
             return NULL;
         }
         else
@@ -33,7 +33,7 @@ public:
     int top()
     {
         if (TOP == -1)
-            cout << "UnderFlowed\n\n";
+            cout << "\033[1;31mUnderFlowed\033[1;0m\n\n";
         else
             return arr[TOP];
     }
